@@ -73,4 +73,16 @@ Git的版本库里存了很多东西，其中最重要的就是称为stage（或
 
 因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，git commit就是往master分支上提交更改。
 
+在工作区新增一个LICENSE文本文件（内容随便写）
+
+先用git status查看一下状态：
+
+Git非常清楚地告诉我们，readme.txt被修改了，而LICENSE还从来没有被添加过，所以它的状态是Untracked。
+
+现在，使用两次命令git add，把readme.txt和LICENSE都添加后，用git status再查看一下：
+
+所以，git add命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行git commit就可以一次性把暂存区的所有修改提交到分支。
+
+一旦提交后，如果你又没有对工作区做任何修改，那么工作区就是“干净”的：
+
 
